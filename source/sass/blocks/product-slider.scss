@@ -28,19 +28,27 @@
 
     // background-image: url("");
   }
-  
-  &:hover,
-  :focus,
-  :focus-visible {
-    outline: none;
-    background-color: $base-white;
-  }
 
   &--prev {
-    left: 0;
+    // СОСТОЯНИЯ КНОПКИ
+    &:hover {
+      outline: none;
+      background: linear-gradient(to right, $base-white -40%, transparent);
+    }
+  
+    &:focus {
+      outline: none;
+      background: linear-gradient(to right, $base-white -40%, transparent);
+    }
+  
+    &:focus-visible {
+      outline: none;
+      background: linear-gradient(to right, $base-white -40%, transparent);
+    }
+
     &:active {
       outline: none;
-      background: linear-gradient(to right, $base-primary -150%, transparent);
+      background: linear-gradient(to right, $base-primary -300%, transparent);
     }
   }
 
@@ -51,9 +59,25 @@
       transform: rotate(180deg);
     }
 
+    // СОСТОЯНИЯ КНОПКИ
+    &:hover {
+      outline: none;
+      background: linear-gradient(to left, $base-white -40%, transparent);
+    }
+  
+    &:focus {
+      outline: none;
+      background: linear-gradient(to left, $base-white -40%, transparent);
+    }
+  
+    &:focus-visible {
+      outline: none;
+      background: linear-gradient(to left, $base-white -40%, transparent);
+    }
+
     &:active {
       outline: none;
-      background: linear-gradient(to left, $base-primary -150%, transparent);
+      background: linear-gradient(to left, $base-primary -300%, transparent);
     }
   }
 

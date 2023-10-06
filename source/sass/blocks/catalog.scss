@@ -39,8 +39,11 @@
   background-color: transparent;
   border: none;
 
-  &:hover,
-   :focus {
+  &:hover {
+    background-color: $base-secondary;
+   }
+
+  &:focus {
     background-color: $base-secondary;
    }
 
