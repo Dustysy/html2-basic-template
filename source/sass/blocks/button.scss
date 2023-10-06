@@ -12,16 +12,19 @@
   border-radius: 4px;
 
   &:hover,
-    :focus {
+   :focus {
     outline: none;
-      background-color: $primary-lighter;
-    }
+    background-color: $primary-lighter;
+    color: $base-white
+  }
 
   &:active {
     background-color: $primary-darker;
+    color: $base-white
   }
 
   &:disabled {
     background-color: $base-grey;
+    color: $base-white
   }
 }

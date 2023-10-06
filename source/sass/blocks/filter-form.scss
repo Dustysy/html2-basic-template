@@ -1,0 +1,53 @@
+/* range-price, input-price-wrapper, input-min-wrapper input-price, input-price-field, range-scale, range-bar, range-toggle toggle-min, toggle-max*/
+.filter-form {
+  width: 100%;
+
+  font-size: $label-size;
+  line-height: $label-line-height;
+}
+
+.filter-form__fieldset {
+  margin: 0 0 30px;
+  padding: 0;
+  border: none;
+}
+
+.filter-form__fieldset legend {
+  margin: 0 0 20px;
+  padding: 0;
+
+  font-weight: 700;
+}
+
+.filter-form__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.filter-form__item {
+  &:not(:last-child) {
+    margin: 0 0 20px;
+  }
+}
+
+// .filter-form__button-wrapper {
+
+// }
+
+.filter-form__button {
+  width: 100%;
+  margin: 0 0 20px;
+
+  &--reset {
+    color: $base-primary;
+
+    background-color: $base-white;
+
+    &:disabled {
+      background-color: $light-grey;
+    }
+  }
+}
+
+

@@ -188,71 +188,47 @@
             </fieldset> -->
             
             <!-- RADIO INPUTS -->
-            <fieldset class="filter-control-field">
+            <fieldset class="filter-form__fieldset">
               <legend>Наличие молока</legend>
-              <ul class="filter-list-content">
-                <li>
+              <ul class="filter-form__list">
+                <li class="filter-form__item">
                   <label class="control">
-                    <input class="control-input visually-hidden" type="radio" name="whatever" checked>
-                    <span class="control-mark"></span>
-                    <span class="control-title">Неважно</span>
+                    <input class="control__input visually-hidden" type="radio" name="whatever" checked>
+                    <!-- <span class="control__mark"></span> -->
+                    <span class="control__title">Неважно</span>
                   </label>
                 </li>
 
-                <li>
+                <li class="filter-form__item">
                   <label class="control">
-                    <input class="control-input visually-hidden" type="radio" name="animal">
-                    <span class="control-mark"></span>
-                    <span class="control-title">Только животное</span>
+                    <input class="control__input visually-hidden" type="radio" name="animal">
+                    <!-- <span class="control__mark"></span> -->
+                    <span class="control__title">Только животное</span>
                   </label>
                 </li>
 
-                <li>
+                <li class="filter-form__item">
                   <label class="control">
-                    <input class="control-input visually-hidden" type="radio" name="plant">
-                    <span class="control-mark"></span>
-                    <span class="control-title">Только растительное</span>
+                    <input class="control__input visually-hidden" type="radio" name="plant">
+                    <span class="control__mark"></span>
+                    <span class="control__title">Только растительное</span>
                   </label>
                 </li>
 
-                <li>
+                <li class="filter-form__item">
                   <label class="control">
-                    <input class="control-input visually-hidden" type="radio" name="without" disabled>
-                    <span class="control-mark"></span>
-                    <span class="control-title">Без молока</span>
+                    <input class="control__input visually-hidden" type="radio" name="without" disabled>
+                    <span class="control__mark"></span>
+                    <span class="control__title">Без молока</span>
                   </label>
                 </li>
               </ul>
             </fieldset>
 
             <!-- <fieldset class="filter-control-field">  TOGGLES
-              <legend>Страна производителя</legend>
+              <legend>Страна произоастания</legend>
               <ul class="filter-list-content">
-                <li>
-                  <label class="control">
-                    <input class="control-input visually-hidden" type="radio" name="pool" checked>
-                    <span class="control-mark"></span>
-                    <span class="control-title"></span>
-                  </label>
-                </li>
-
-                <li>
-                  <label class="control">
-                    <input class="control-input visually-hidden" type="radio" name="pool" checked>
-                    <span class="control-mark"></span>
-                    <span class="control-title"></span>
-                  </label>
-                </li>
-
-                <li>
-                  <label class="control">
-                    <input class="control-input visually-hidden" type="radio" name="pool" checked>
-                    <span class="control-mark"></span>
-                    <span class="control-title"></span>
-                  </label>
-                </li>
-
-                <li>
+                <li class="filter-form__item">
                   <label class="control">
                     <input class="control-input visually-hidden" type="radio" name="pool" checked>
                     <span class="control-mark"></span>
@@ -262,15 +238,15 @@
               </ul>
             </fieldset> -->
 
-            <div class="filter__button-wrapper">
-              <button class="button" type="submit">Применить</button>
-              <button class="button button--reset">Сбросить</button>
+            <div class="filter-form__button-wrapper">
+              <button class="filter-form__button button" type="submit">Применить</button>
+              <button class="filter-form__button filter-form__button--reset button">Сбросить</button>
             </div>
         </form>
 
-        <header class="catalog-header">
-          <span>Сортировка:</span> <!--МОЖЕТ ЗАГАЛОВОК?-->
-          <select class="sorting-select" name="sorting" aria-label="Сортировка">
+        <header class="catalog__header">
+          <span class="catalog__sorting-title">Сортировка:</span>
+          <select class="catalog__sorting-select" name="sorting" aria-label="Сортировка">
             <option value="descending" selected>по умолчанию</option>
             <option value="descending">сначала дешевые</option>
             <option value="ascending">сначала дорогие</option>
