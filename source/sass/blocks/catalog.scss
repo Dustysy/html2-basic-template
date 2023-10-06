@@ -7,6 +7,15 @@
   background-color: $lightest-grey;
 }
 
+.catalog__title {
+  margin: 0 0 20px;
+
+  font-size: $h2-mobile-size;
+  line-height: $h2-mobile-line-height;
+  font-weight: 700;
+  text-align: center;
+}
+
 .catalog__header {
   margin: 0 0 16px;
 }
