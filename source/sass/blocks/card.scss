@@ -1,0 +1,60 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  width: 280px;
+  min-height: 420px;
+  margin: 0 0 20px;
+  padding: 40px 20px 20px;
+
+  background-color: $base-white;
+}
+
+.card__image-link {
+  display: flex;
+  justify-content: center;
+  margin: 0 0 24px;
+}
+
+.card__link {
+  font-family: $main-font;
+  font-size: $h3-mobile-size;
+  line-height: $h2-mobile-line-height;
+  text-decoration: none;
+  color: $base-black;
+  font-weight: 700;
+}
+
+.card__text {
+  font-size: $text-mobile-size;
+  line-height: $text-mobile-line-height;
+}
+
+.card__buy-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.card__price {
+  font-size: $price-size;
+  line-height: $price-line-height;
+  font-weight: 600;
+}
+
+.card__button {
+  width: 141px;
+}
+
+.card__button span {
+  padding-left: 26px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 20px;
+    height: 16px;
+    // background-image: url("");
+  }
+}

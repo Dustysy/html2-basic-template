@@ -1,0 +1,25 @@
+.button {
+  min-width: 113px;
+  padding: 8px 20px;
+
+  text-align: center;
+  color: $base-white;
+
+  background-color: $base-primary;
+  border: none;
+  border-radius: 4px;
+
+  &:hover,
+    :focus {
+    outline: none;
+      background-color: $primary-lighter;
+    }
+
+  &:active {
+    background-color: $primary-darker;
+  }
+
+  &:disabled {
+    background-color: $base-grey;
+  }
+}
