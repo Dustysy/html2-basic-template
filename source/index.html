@@ -10,7 +10,7 @@
   </head>
   <body class="page__body">
     <!-- PAGE HEADER -->
-    <header class="page-header">
+    <header class="page-header" data-test="header">
       <a class="page-header__link" href="#">
         <picture>
           <source media="(width 1440px)" srcset="images/logo-desktop.svg">
@@ -33,7 +33,7 @@
         </ul>
 
         <!-- SITE NAVIGATION -->
-        <button class="page-header__toggle" type="button"> <!--ДОБАВИТЬ SVG-->
+        <button class="page-header__toggle js-toggle-button" type="button"> <!--ДОБАВИТЬ SVG-->
           <span class="visually-hidden">Показать/Скрыть навигационное меню</span>
           <svg class="page-header__burger" width="23" height="22">
           </svg>
@@ -66,8 +66,8 @@
     <!-- PAGE MAIN -->
     <main class="page-main">
       <!-- PRODUCT SLIDER -->
-      <section class="product-slider">
-        <button class="product-slider__button product-slider__button--prev">
+      <section class="product-slider" data-test="hero">
+        <button class="product-slider__button slider-button-prev">
           <span class="visually-hidden">Предыдущий продукт</span>
         </button>
 
@@ -96,25 +96,48 @@
 
         </div>
 
-        <button class="product-slider__button product-slider__button--next">
+        <button class="product-slider__button slider-button-next">
           <span class="visually-hidden">Следующий продукт</span>
         </button>
+
+        <div class="product-slider__pagination slider-pagination">
+          <ol class="slider-pagination__list">
+            <li class="slider-pagination__item">
+              <button class="slider-pagination__button">
+                <span class="visually-hidden">Первый продукт</span>
+              </button>
+            </li>
+
+            <li class="slider-pagination__item">
+              <button class="slider-pagination__button">
+                <span class="visually-hidden">Второй продукт</span>
+              </button>
+            </li>
+
+            <li class="slider-pagination__item">
+              <button class="slider-pagination__button">
+                <span class="visually-hidden">Третий продукт</span>
+              </button>
+            </li>
+          </ol>
+        </div>
       </section>
 
-      <!-- ADVANTAGES -->
-      <section class="advantages">
+
+      <!-- FEATURES -->
+      <section class="features" data-test="features">
         <h4 class="category-name">Преимущества</h4>
-        <h2 class="advantages__title">Главные причины выбрать Drink2Go</h2>
-        <ul class="advantages__list">
-          <li class="advantages__item">
-            <h3 class="advantages__item-title">Скорость</h3>
-            <p class="advantages__text">Готовый напиток всегда под рукой — просто открой банку</p>
+        <h2 class="features__title">Главные причины выбрать Drink2Go</h2>
+        <ul class="features__list">
+          <li class="features__item">
+            <h3 class="features__item-title">Скорость</h3>
+            <p class="features__text">Готовый напиток всегда под рукой — просто открой банку</p>
           </li>
         </ul>
       </section>
 
       <!-- CATALOG -->
-      <section class="catalog">
+      <section class="catalog" data-test="catalog">
         <h4 class="category-name">Каталог</h4>
         <h2 class="catalog__title">Каталог кофейных напитков</h2>
 
@@ -362,7 +385,7 @@
         </div>
       </section>
 
-      <secton class="map-position">
+      <secton class="map-position" data-test="map">
         <picture>
           <source type="image/webp" media="(width 1440px)" srcset="images/map-desktop.webp 1x, images/map-desktop@2x.webp 2x">
           <source media="(width 1440px)" srcset="images/map-desktop.jpg 1x, images/map-desktop@2x.jpg 2x">
@@ -375,7 +398,7 @@
     </main>
 
     <!-- PAGE FOOTER -->
-    <footer class="page-footer">
+    <footer class="page-footer" data-test="footer">
       <a class="page-footer__link" href="#">
         <picture>
           <source media="(width 768px)" srcset="images/logo-desktop.svg">
