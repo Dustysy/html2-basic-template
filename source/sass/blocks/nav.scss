@@ -1,5 +1,4 @@
 .nav {
-
   display: flex;
   flex-wrap: wrap;
 }
@@ -13,9 +12,9 @@
   list-style: none;
 }
 
-.nav__customer-item {
+// .nav__customer-item {
 
-}
+// }
 
 .nav__customer-button {
   padding: 22px;
@@ -82,7 +81,7 @@
   text-transform: uppercase;
   text-decoration: none;
 
-  &--current {
+  // &--current {
 
-  }
+  // }
 }
