@@ -21,23 +21,51 @@
 }
 
 .catalog__sorting-title{
-  margin: 0 8px 0 0;
+  position: relative;
+
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+
+  margin: 0;
 
   font-size: $label-size;
   line-height: $label-line-height;
   font-weight: 700;
+
+  span {
+   margin: 0 8px 0 0;
+
+    &::after {
+      content: "";
+      position: absolute;
+      z-index: 5;
+      top: 50%;
+      right: 7px;
+      transform: translate(0, -50%) rotate(-90deg);
+
+      width: 10px;
+      height: 10px;
+
+      background-image: url("../../images/icons/stack.svg#arrow");
+    }
+  }
 }
 
 .catalog__sorting-select {
   width: 165px;
   padding: 4px 27px 4px 10px;
 
+  font-family: $main-font;
   font-size: $label-size;
   line-height: $label-line-height;
   color: $base-primary;
 
   background-color: transparent;
   border: none;
+
+  appearance: none;
+  cursor: pointer;
 
   &:hover {
     background-color: $base-secondary;
@@ -49,6 +77,10 @@
 
   &:active {
     background-color: transparent;
+
+    &~ span::after {
+      transform: translate(0, -50%) rotate(90deg);
+    }
     // Добавить дополнителльную стилизацию стрелки
   }
 }

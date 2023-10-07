@@ -6,30 +6,30 @@
 }
 
 .pagination__button {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 40px;
   height: 40px;
   padding: 15px;
 
   background-color: $base-white;
 
-  &::before{
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-
-    width: 10px;
-    height: 10px;
-
-    // background-image: url("");
+  .pagination__button-icon {
+    fill: $base-primary;
   }
 
   &--next {
-    &::before {
-      transform: rotate(180deg);
-    }
+    transform: rotate(180deg);
   }
+
+  &:hover .pagination__button-icon,
+  &:focus .pagination__button-icon,
+  &:active .pagination__button-icon,
+  &:disabled .pagination__button-icon{
+    fill: $base-white;
+  } 
 
   &:disabled {
     background-color: $light-grey;

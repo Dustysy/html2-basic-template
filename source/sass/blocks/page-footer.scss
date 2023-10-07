@@ -91,13 +91,13 @@
   &::before {
     content: "";
     position: absolute;
-    top: 0;
-    right: 6px;
+    top: 1px;
+    left: -6px;
 
     width: 13px;
     height: 16px;
 
-    // background-image: url("");
+    background-image: url("../../images/icons/stack.svg#address-icon");
   }
 }
 
@@ -113,12 +113,21 @@
     content: "";
     position: absolute;
     top: 0;
-    right: 6px;
+    left: -6px;
 
     width: 13px;
     height: 16px;
 
-    // background-image: url("");
+    background-image: url("../../images/icons/stack.svg#phone-icon");
+  }
+
+  &:hover,
+  &:focus {
+    color: $base-primary;
+  }
+
+  &:active {
+    color: $primary-darker;
   }
 }
 

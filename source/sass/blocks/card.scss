@@ -45,19 +45,25 @@
 }
 
 .card__button {
-  width: 141px;
+  width: 142px;
 }
 
 .card__button span {
+  position: relative;
+
   padding-left: 26px;
+
+  font-size: $text-mobile-size;
+  line-height: $text-mobile-line-height;
 
   &::before {
     content: "";
     position: absolute;
-    bottom: 0;
+    top: 0;
     left: 0;
+
     width: 20px;
     height: 16px;
-    // background-image: url("");
+    background-image: url("../../images/icons/stack.svg#to-basket");
   }
 }

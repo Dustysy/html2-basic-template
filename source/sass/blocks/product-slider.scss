@@ -12,12 +12,14 @@
 
   width: 20px;
   height: 100%;
+  padding: 0;
 
   background-color: transparent;
-
   border: none;
 
-  &::before{
+  cursor: pointer;
+
+  &::before {
     content: "";
     position: absolute;
     top: 50%;
@@ -26,29 +28,30 @@
     width: 20px;
     height: 20px;
 
-    // background-image: url("");
+    background-image: url("../../images/icons/stack.svg#arrow");
   }
 
   &--prev {
+    left: 0;
     // СОСТОЯНИЯ КНОПКИ
     &:hover {
       outline: none;
-      background: linear-gradient(to right, $base-white -40%, transparent);
+      background: linear-gradient(to right, $base-white 10%, transparent);
     }
   
     &:focus {
       outline: none;
-      background: linear-gradient(to right, $base-white -40%, transparent);
+      background: linear-gradient(to right, $base-white 10%, transparent);
     }
   
     &:focus-visible {
       outline: none;
-      background: linear-gradient(to right, $base-white -40%, transparent);
+      background: linear-gradient(to right, $base-white 10%, transparent);
     }
 
     &:active {
       outline: none;
-      background: linear-gradient(to right, $base-primary -300%, transparent);
+      background: linear-gradient(to right, $base-primary -250%, transparent);
     }
   }
 
@@ -62,22 +65,22 @@
     // СОСТОЯНИЯ КНОПКИ
     &:hover {
       outline: none;
-      background: linear-gradient(to left, $base-white -40%, transparent);
+      background: linear-gradient(to left, $base-white 10%, transparent);
     }
   
     &:focus {
       outline: none;
-      background: linear-gradient(to left, $base-white -40%, transparent);
+      background: linear-gradient(to left, $base-white 10%, transparent);
     }
   
     &:focus-visible {
       outline: none;
-      background: linear-gradient(to left, $base-white -40%, transparent);
+      background: linear-gradient(to left, $base-white 10%, transparent);
     }
 
     &:active {
       outline: none;
-      background: linear-gradient(to left, $base-primary -300%, transparent);
+      background: linear-gradient(to left, $base-primary -250%, transparent);
     }
   }
 

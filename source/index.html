@@ -21,28 +21,7 @@
       
       <!-- NAVIGATION -->
       <nav class="page-header__nav nav">
-        <!-- CUSTOMER NAVIGATION -->
-        <ul class="nav__customer-list">
-          <li class="nav__customer-item">
-            <button class="nav__customer-button" type="button"></button>
-          </li>
-
-          <li class="nav__customer-item">
-            <button class="nav__customer-button" type="button"></button>
-          </li>
-        </ul>
-
         <!-- SITE NAVIGATION -->
-        <button class="nav__toggle js-toggle-button" type="button"> <!--ДОБАВИТЬ SVG-->
-          <span class="visually-hidden">Показать/Скрыть навигационное меню</span>
-          <svg class="nav__burger" width="23" height="22">
-          </svg>
-  
-          <svg class="nav__cross" width="23" height="23">
-            
-          </svg>
-        </button>
-
         <ul class="nav__site-list">
           <li class="nav__site-item">
             <a class="nav__link nav__link--current" href="#">Главная</a>
@@ -59,7 +38,38 @@
           <li class="nav__site-item">
             <a class="nav__link" href="#">О нас</a>
           </li>
+        </ul>     
+
+        <!-- CUSTOMER NAVIGATION -->
+        <ul class="nav__customer-list">
+          <li class="nav__customer-item">
+            <a class="nav__customer-link" href="#">
+              <svg class="nav__customer-icon" width="16" height="16">
+                <use href="images/icons/stack.svg#user"></use>
+              </svg>
+            </a>
+          </li>
+
+          <li class="nav__customer-item">
+            <a class="nav__customer-link" href="#">
+              <svg class="nav__customer-icon" width="16" height="16">
+                <use href="images/icons/stack.svg#busket"></use>
+              </svg>
+            </a>
+          </li>
         </ul>
+
+        <!-- BURGER MENU -->
+        <button class="nav__toggle js-toggle-button" type="button">
+          <span class="visually-hidden">Показать/Скрыть навигационное меню</span>
+          <svg class="nav__burger" width="16" height="16">
+            <use href="images/icons/stack.svg#menu-burger"></use>
+          </svg>
+  
+          <svg class="nav__cross" width="16" height="16">
+            <use href="images/icons/stack.svg#cross-icon"></use>
+          </svg>
+        </button>
       </nav>
     </header>
 
@@ -145,7 +155,7 @@
           </li>
 
           <li class="features__item">
-            <h3 class="features__item-titlefeatures__item-title--eco">Экологичность</h3>
+            <h3 class="features__item-title features__item-title--eco">Экологичность</h3>
             <p class="features__text">Вся упаковка сделана из перерабатываемых материалов</p>
           </li>
         </ul>
@@ -245,14 +255,16 @@
         </form>
 
         <header class="catalog__header">
-          <span class="catalog__sorting-title">Сортировка:</span>
-          <select class="catalog__sorting-select" name="sorting" aria-label="Сортировка">
-            <option value="descending" selected>по умолчанию</option>
-            <option value="descending">сначала дешевые</option>
-            <option value="ascending">сначала дорогие</option>
-            <option value="popular">сначала популярные</option>
-            <option value="rating">сначала с высоким рейтингом</option>
-          </select>
+          <label class="catalog__sorting-title">
+            <select class="catalog__sorting-select" name="sorting" aria-label="Сортировка">
+              <option value="descending" selected>по умолчанию</option>
+              <option value="descending">сначала дешевые</option>
+              <option value="ascending">сначала дорогие</option>
+              <option value="popular">сначала популярные</option>
+              <option value="rating">сначала с высоким рейтингом</option>
+            </select>
+            <span>Сортировка:</span>
+          </label>
         </header>
 
         <ul class="catalog__list">
@@ -364,6 +376,9 @@
         <div class="pagination">
           <button class="button pagination__button pagination__button--prev" type="button">
             <span class="visually-hidden">Предыдущая страница</span>
+            <svg class="pagination__button-icon" width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M13.7166 0L15 1.32082L6.56677 10L15 18.6792L13.7166 20L4 10L13.7166 0Z"/>
+            </svg>
           </button>
       
           <a class="pagination__link button" href="#">1</a>
@@ -372,6 +387,9 @@
 
           <button class="button pagination__button pagination__button--next" type="button">
             <span class="visually-hidden">Следующая страница</span>
+            <svg class="pagination__button-icon" width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+              <path d="M13.7166 0L15 1.32082L6.56677 10L15 18.6792L13.7166 20L4 10L13.7166 0Z"/>
+            </svg>
           </button>
         </div>
       </section>
@@ -402,7 +420,7 @@
             <a class="social__link" href="#">
               <span class="visually-hidden">В контакте</span>
               <svg class="social__icon" width="20" height="20">
-                <!-- <use href="img/sprite.svg#vk"></use> -->
+                <use href="../images/icons/stack.svg#vk-icon"></use>
               </svg>
             </a>
           </li>
@@ -411,7 +429,7 @@
             <a class="social__link" href="#">
               <span class="visually-hidden">Пинтерест</span>
               <svg class="social__icon" width="20" height="20">
-                <!-- <use href="img/sprite.svg#vk"></use> -->
+                <use href="../images/icons/stack.svg#pinterest-icon"></use>
               </svg>
             </a>
           </li>
@@ -420,7 +438,7 @@
             <a class="social__link" href="#">
               <span class="visually-hidden">Одноклассники</span>
               <svg class="social__icon" width="20" height="20">
-                <!-- <use href="img/sprite.svg#vk"></use> -->
+                <use href="../images/icons/stack.svg#ok-icon"></use>
               </svg>
             </a>
           </li>
@@ -478,7 +496,12 @@
       </div>
 
       <span class="page-footer__copyright copyright">Разработано в
-        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
+          HTML Academy
+          <svg class="copyright__logo" width="12" height="16">
+            <use href="images/icons/stack.svg#html-academy-logo"></use>
+          </svg>
+        </a>
       </span>
     </footer>
     <script src="js/script.js" defer></script>

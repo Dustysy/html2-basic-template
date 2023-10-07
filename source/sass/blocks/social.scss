@@ -13,7 +13,28 @@
 // }
 
 .social__link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 40px;
+  height: 40px;
   padding: 10px;
+
+  color: $base-grey;
+
+  border-radius: 4px;
+
+  &:hover,
+  &:focus {
+    background-color: $base-secondary;
+    color: $base-primary;
+  }
+
+  &:active {
+    background-color: $primary-opacity;
+    color: $primary-darker;
+  }
 }
 
 // .social__icon {

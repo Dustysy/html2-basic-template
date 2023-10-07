@@ -16,11 +16,20 @@
 
 // }
 
-.nav__customer-button {
+.nav__customer-link {
+  display: flex;
   padding: 22px;
 
-  background-color: transparent;
-  border: none;
+  font-size: $badge-size;
+  line-height: $badge-line-height;
+  color: $base-black;
+  text-transform: uppercase;
+  text-decoration: none;
+
+  &:active {
+    background-color: $base-secondary;
+    color: $base-black;
+  }
 }
 
 /* SITE */
@@ -31,8 +40,17 @@
 
   background-color: transparent;
   border: none;
+
+  cursor: pointer;
+
+  &:active {
+    background-color: $base-secondary;
+  }
 }
 
+.nav__cross {
+  display: none;
+}
 
 .nav__site-list {
   position: absolute;
@@ -55,11 +73,11 @@
   &--open {
     display: block;
 
-    .nav__burger {
+    &~ .nav__toggle .nav__burger {
       display: none;
     }
     
-    .nav__cross {
+    &~ .nav__toggle .nav__cross {
       display: block;
     }
   }
@@ -83,6 +101,9 @@
   text-transform: uppercase;
   text-decoration: none;
 
+  &:active {
+    background-color: $base-secondary;
+  }
   // &--current {
 
   // }
