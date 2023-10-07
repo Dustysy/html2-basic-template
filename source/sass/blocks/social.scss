@@ -1,0 +1,21 @@
+.social {
+  display: grid;
+  grid-template-columns:repeat(3, 40px);
+  gap: 20px;
+
+  width: fit-content;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+// .social__item {
+// }
+
+.social__link {
+  padding: 10px;
+}
+
+// .social__icon {
+
+// }

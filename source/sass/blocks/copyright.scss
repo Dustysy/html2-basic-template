@@ -1,0 +1,24 @@
+.copyright {
+  color: $base-grey;
+}
+
+.copyright__link {
+  position: relative;
+
+  padding: 16px 24px 16px 0; /*Adds a bigger area for a click*/
+
+  color: $base-grey;
+  text-decoration: none;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 4px;
+
+    width: 12px;
+    height: 16px;
+
+    // background-image: url("");
+  }
+}
