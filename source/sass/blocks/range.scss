@@ -1,4 +1,4 @@
-.range { 
+.range {
   min-height: 24px;
   padding: 10px 0;
 }
@@ -41,6 +41,7 @@
   display: flex;
   justify-content: space-between;
   margin: auto 0 0;
+
 }
 
 .range__title {
@@ -77,6 +78,15 @@
   &::-webkit-outer-spin-button,
   &::-webkit-inner-spin-button {
     appearance: none;
+  }
+
+  
+  @media (min-width: $tablet-width) {
+    width: 88px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 134px;
   }
 
   &:placeholder-shown {

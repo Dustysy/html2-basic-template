@@ -71,12 +71,13 @@
       }
     }
 
-  &:disabled:not(:checked) ~ .switch__title, 
+  &:disabled:not(:checked) ~ .switch__title {
+    color: $base-grey
+  }
+
   &:disabled:not(:checked) ~ .switch__mark {
     background-color: $light-grey;
     border-color: $light-grey;
-    color: $base-grey;
-
     cursor: default;
 
     &::after {

@@ -5,6 +5,14 @@
   padding: 50px 20px 44px;
 
   background-color: $lightest-grey;
+
+  @media (min-width: $tablet-width) {
+    padding: 80px 20px 90px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 100px 40px 120px;
+  }
 }
 
 .catalog__title {
@@ -14,9 +22,30 @@
   line-height: $h2-mobile-line-height;
   font-weight: 700;
   text-align: center;
+
+  @media (min-width: $tablet-width) {
+    font-size: $h2-tablet-size;
+    line-height: $h2-tablet-line-height;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 0 0 40px;
+  }
+}
+
+.catalog__content-wrapper {
+  @media (min-width: $desktop-width) {
+    display: flex;
+    gap: 30px;
+  }
+}
+
+.catalog__catalog-wrapper {
+  margin: 0 0 40px;
 }
 
 .catalog__header {
+  min-height: 32px;
   margin: 0 0 16px;
 }
 
@@ -91,12 +120,12 @@
   list-style: none;
 
   @media (min-width: $tablet-width) {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(2, 349px);
     gap: 30px;
   }
 
-  // @media (min-width: $desktop-width) {
-  //   padding: 100px 40px 120px;
-  // }
+  @media (min-width: $desktop-width) {
+    grid-template-columns: repeat(3, 317px);
+  }
 }
