@@ -1,4 +1,3 @@
-/* range-price, input-price-wrapper, input-min-wrapper input-price, input-price-field, range-scale, range-bar, range-toggle toggle-min, toggle-max*/
 .filter-form {
   width: 100%;
 
@@ -10,6 +9,7 @@
   margin: 0 0 30px;
   padding: 0;
   border: none;
+
 }
 
 .filter-form__fieldset legend {
@@ -29,6 +29,10 @@
   &:not(:last-child) {
     margin: 0 0 20px;
   }
+}
+
+.filter-form__range {
+  margin: 0 0 24px;
 }
 
 // .filter-form__button-wrapper {

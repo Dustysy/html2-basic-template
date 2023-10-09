@@ -1,8 +1,6 @@
 /* в этот файл добавляет скрипты*/
-const toggle = document.querySelector(".js-toggle-button");
-const siteNav = document.querySelector(".nav__site-list");
+import { openMenu } from './open-menu.js'
+import { initRange } from './range.js';
 
-const onToggleClick = () => {
-  siteNav.classList.toggle("nav__site-list--open")
-}
-toggle.addEventListener('click', onToggleClick)
+openMenu();
+initRange();

@@ -1,0 +1,88 @@
+.switch {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+}
+
+.switch__title {
+  margin: 0 0 0 10px;
+}
+
+.switch__mark {
+  position: relative;
+
+  display: flex;
+  width: 42px;
+  height: 24px;
+
+  background-color:  $base-grey;
+  border: 2px solid $base-grey;
+  border-radius: 12px;
+  
+  cursor: pointer;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+
+    width: 20px;
+    height: 20px;
+
+    background-color: $base-white;
+    border-radius: 50%;
+  }
+}
+
+.switch__input {
+  &:hover:not(:disabled):not(:checked) ~ .switch__mark,
+  &:focus:not(:disabled):not(:checked) ~ .switch__mark {
+    background-color: $primary-opacity;
+    border-color: $primary-lighter;
+
+    &::after {
+      left: 0;
+    }
+   
+  }
+  
+  &:checked ~ .switch__mark {
+    background-color: $base-primary;
+    border-color: $base-primary;
+
+      &::after {
+        right: 0;
+      }
+  }
+
+  &:checked:disabled ~ .switch__title, 
+  &:checked:disabled ~ .switch__mark {
+    background-color: $light-grey;
+    border-color: $light-grey;
+    color: $base-grey;
+
+    cursor: default;
+
+    &::after {
+        right: 0;
+        background-color: $base-grey;
+      }
+    }
+
+  &:disabled:not(:checked) ~ .switch__title, 
+  &:disabled:not(:checked) ~ .switch__mark {
+    background-color: $light-grey;
+    border-color: $light-grey;
+    color: $base-grey;
+
+    cursor: default;
+
+    &::after {
+      left: 0;
+
+      background-color: $base-white;
+    }
+  }
+}
