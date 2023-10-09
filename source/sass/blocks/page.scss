@@ -1,6 +1,6 @@
 .page {
   display: flex;
-  // min-width: 320px;
+  min-width: 320px;
   width: 320px;
   width: 100%;
   min-height: 100%;
@@ -9,9 +9,7 @@
 .page__body {
   display: flex;
   flex-direction: column;
-  // width: 100%;
-  width: 320px;
-  // max-width: 1440px;
+  width: $mobile-width;
   min-height: 100%;
   margin: 0 auto;
 
@@ -20,6 +18,17 @@
   font-size: $text-mobile-size;
   line-height: $text-mobile-line-height;
   color: $base-black;
+
+  @media (min-width: $tablet-width) {
+    width: $tablet-width;
+
+    font-size: $text-tablet-size;
+    line-height: $text-tablet-line-height;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: $desktop-width;
+  }
 }
 
 .page-main {

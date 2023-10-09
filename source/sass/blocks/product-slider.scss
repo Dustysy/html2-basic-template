@@ -107,6 +107,9 @@
 
 .product-slider__text {
   margin: 0 0 20px;
+
+  font-size: $slider-text-mobile-size;
+  line-height: $slider-text-mobile-line-height;
 }
 
 .product-slider__old-price {

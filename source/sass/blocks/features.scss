@@ -1,12 +1,20 @@
 .features {
- display: flex;
- flex-direction: column;
- justify-content: center;
- padding: 50px 20px 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 50px 20px 60px;
 
- text-align: center;
+  text-align: center;
 
- background-color: $base-white;
+  background-color: $base-white;
+
+  @media (min-width: $tablet-width) {
+    padding: 60px 20px 100px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 100px 40px 120px;
+  }
 }
 
 .features__title {
@@ -15,18 +23,59 @@
   font-size: $h2-mobile-size;
   line-height: $h2-mobile-line-height;
   font-weight: 700;
+
+  @media (min-width: $tablet-width) {
+    margin: 0 0 60px;
+
+    font-size: $h2-tablet-size;
+    line-height: $h2-tablet-line-height;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 0 0 80px;
+  }
 }
 
 .features__list {
   margin: 0;
   padding: 0;
   list-style: none;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 50px 30px;
+
+    text-align: start;
+  }
+
+  @media (min-width: $desktop-width) {
+    justify-content: flex-start;
+    gap: 50px 30px;
+
+    text-align: center;
+  }
 }
 
 .features__item {
   padding: 66px 0 0;
   &:not(:last-child) {
     margin: 0 0 32px;
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 339px;
+    padding: 0 0 0 72px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 317px;
+    padding: 72px 0 0;
+
+    &:not(:last-child) {
+      margin: 0;
+    }
   }
 }
 
@@ -64,7 +113,26 @@
   
   &--eco::before {
     background-image: url("../../images/icons/stack.svg#eco-icon");
-  } 
+  }
+
+  @media (min-width: $tablet-width) {
+    margin: 0 0 10px;
+
+    font-size: $h3-tablet-size;
+    line-height: $h3-tablet-line-height;
+    &::before {
+      top: 0;
+      left: -42px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    &::before {
+      top: -72px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
 }
 
 .features__text {
