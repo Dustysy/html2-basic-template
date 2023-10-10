@@ -1,8 +1,15 @@
 .pagination {
   display: flex;
-  justify-content: space-between;
+  gap: 20px;
 
   width: 100%;
+
+  @media (min-width: $tablet-width) {
+    justify-content: flex-end;
+  }
+
+  @media (min-width: $desktop-width) {
+  }
 }
 
 .pagination__button {
@@ -31,8 +38,42 @@
     fill: $base-white;
   }
 
+  &:hover .pagination__button-text,
+  &:focus .pagination__button-text,
+  &:active .pagination__button-text,
+  &:disabled .pagination__button-text {
+    color: $base-white;
+    fill: $base-white;
+  }
+
   &:disabled {
     background-color: $light-grey;
+  }
+
+  @media (min-width: $tablet-width) {
+    width: unset;
+    padding: 8px 20px;
+    &--next {
+      transform: none;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+  }
+}
+
+.pagination__button-icon {
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
+}
+
+.pagination__button-text {
+  display: none;
+  color: $base-primary;
+
+  @media (min-width: $tablet-width) {
+    display: block;
   }
 }
 
