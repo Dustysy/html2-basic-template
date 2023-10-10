@@ -16,10 +16,10 @@
   width: 42px;
   height: 24px;
 
-  background-color:  $base-grey;
+  background-color: $base-grey;
   border: 2px solid $base-grey;
   border-radius: 12px;
-  
+
   cursor: pointer;
 
   &::after {
@@ -45,19 +45,18 @@
     &::after {
       left: 0;
     }
-   
   }
-  
+
   &:checked ~ .switch__mark {
     background-color: $base-primary;
     border-color: $base-primary;
 
-      &::after {
-        right: 0;
-      }
+    &::after {
+      right: 0;
+    }
   }
 
-  &:checked:disabled ~ .switch__title, 
+  &:checked:disabled ~ .switch__title,
   &:checked:disabled ~ .switch__mark {
     background-color: $light-grey;
     border-color: $light-grey;
@@ -66,13 +65,13 @@
     cursor: default;
 
     &::after {
-        right: 0;
-        background-color: $base-grey;
-      }
+      right: 0;
+      background-color: $base-grey;
     }
+  }
 
   &:disabled:not(:checked) ~ .switch__title {
-    color: $base-grey
+    color: $base-grey;
   }
 
   &:disabled:not(:checked) ~ .switch__mark {

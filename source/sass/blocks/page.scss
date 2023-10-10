@@ -1,7 +1,6 @@
 .page {
   display: flex;
   min-width: 320px;
-  width: 320px;
   width: 100%;
   min-height: 100%;
 }
@@ -31,7 +30,7 @@
   }
 }
 
-.page-main {
+.page__main {
   flex-grow: 1;
   height: 100%;
 }

@@ -1,6 +1,6 @@
 .social {
   display: grid;
-  grid-template-columns:repeat(3, 40px);
+  grid-template-columns: repeat(3, 40px);
   gap: 20px;
 
   width: fit-content;
@@ -8,9 +8,6 @@
   padding: 0;
   list-style: none;
 }
-
-// .social__item {
-// }
 
 .social__link {
   display: flex;
@@ -36,7 +33,3 @@
     color: $primary-darker;
   }
 }
-
-// .social__icon {
-
-// }

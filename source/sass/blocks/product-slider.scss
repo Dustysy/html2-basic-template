@@ -38,12 +38,12 @@
       outline: none;
       background: linear-gradient(to right, $base-white 10%, transparent);
     }
-  
+
     &:focus {
       outline: none;
       background: linear-gradient(to right, $base-white 10%, transparent);
     }
-  
+
     &:focus-visible {
       outline: none;
       background: linear-gradient(to right, $base-white 10%, transparent);
@@ -67,12 +67,12 @@
       outline: none;
       background: linear-gradient(to left, $base-white 10%, transparent);
     }
-  
+
     &:focus {
       outline: none;
       background: linear-gradient(to left, $base-white 10%, transparent);
     }
-  
+
     &:focus-visible {
       outline: none;
       background: linear-gradient(to left, $base-white 10%, transparent);
@@ -83,7 +83,6 @@
       background: linear-gradient(to left, $base-primary -250%, transparent);
     }
   }
-
 }
 
 .product-slider__wrapper {

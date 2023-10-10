@@ -27,9 +27,9 @@
   &:hover .pagination__button-icon,
   &:focus .pagination__button-icon,
   &:active .pagination__button-icon,
-  &:disabled .pagination__button-icon{
+  &:disabled .pagination__button-icon {
     fill: $base-white;
-  } 
+  }
 
   &:disabled {
     background-color: $light-grey;

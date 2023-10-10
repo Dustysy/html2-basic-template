@@ -12,11 +12,11 @@
   <body class="page__body">
     <!-- PAGE HEADER -->
     <header class="page-header" data-test="header">
-      <div class="page-heade__logo-wrapper">
+      <div class="page-header__logo-wrapper">
         <a class="page-header__link" href="#">
           <picture>
-            <source media="(min-width: 1440px)" srcset="images/logo-desktop.svg">
-            <source media="(min-width: 768px)" srcset="images/logo-tablet.svg">
+            <source type="image/svg+xml" media="(min-width: 1440px)" srcset="images/logo-desktop.svg">
+            <source type="image/svg+xml" media="(min-width: 768px)" srcset="images/logo-tablet.svg">
             <img class="page-header__logo" src="images/logo.svg" alt="Лого Drink2Go" width="32" height="36">
           </picture>
         </a>
@@ -42,7 +42,7 @@
           <li class="nav__site-item">
             <a class="nav__link" href="#">О&nbsp;нас</a>
           </li>
-        </ul>     
+        </ul>
 
         <!-- CUSTOMER NAVIGATION -->
         <ul class="nav__customer-list">
@@ -80,19 +80,19 @@
     </header>
 
     <!-- PAGE MAIN -->
-    <main class="page-main">
+    <main class="page__main">
       <!-- PRODUCT SLIDER -->
       <section class="product-slider" data-test="hero">
-        <button class="product-slider__button product-slider__button--prev slider-button-prev">
+        <button class="product-slider__button product-slider__button--prev slider-button-prev" type="button">
           <span class="visually-hidden">Предыдущий продукт</span>
         </button>
 
         <div class="product-slider__wrapper">
           <picture>
             <source type="image/webp" media="(min-width:1440px)" srcset="images/slider/slider-1-desktop.webp 1x, images/slider/slider-1-desktop@2x.webp 2x">
-            <source media="(min-width:1440px)" srcset="images/slider/slider-1-desktop.png 1x, images/slider/slider-1-desktop@2x.png 2x">
+            <source type="image/png" media="(min-width:1440px)" srcset="images/slider/slider-1-desktop.png 1x, images/slider/slider-1-desktop@2x.png 2x">
             <source type="image/webp" media="(min-width:768px)" srcset="images/slider/slider-1-tablet.webp 1x, images/slider/slider-1-tablet@2x.webp 2x">
-            <source media="(min-width:768px)" srcset="images/slider/slider-1-tablet.png 1x, images/slider/slider-1-tablet@2x.png 2x">
+            <source type="image/png" media="(min-width:768px)" srcset="images/slider/slider-1-tablet.png 1x, images/slider/slider-1-tablet@2x.png 2x">
             <source type="image/webp" srcset="images/slider/slider-1.webp 1x, images.webp 2x">
             <img class="product-slider__image" src="/images/slider/slider-1.png" srcset="images/slider/slider-1@2x.png 2x" alt="" width="280" height="280">
           </picture>
@@ -112,26 +112,26 @@
 
         </div>
 
-        <button class="product-slider__button product-slider__button--next slider-button-next">
+        <button class="product-slider__button product-slider__button--next slider-button-next" type="button">
           <span class="visually-hidden">Следующий продукт</span>
         </button>
 
         <div class="product-slider__pagination slider-pagination">
           <ol class="slider-pagination__list">
             <li class="slider-pagination__item">
-              <button class="slider-pagination__button">
+              <button class="slider-pagination__button" type="button">
                 <span class="visually-hidden">Первый продукт</span>
               </button>
             </li>
 
             <li class="slider-pagination__item">
-              <button class="slider-pagination__button">
+              <button class="slider-pagination__button" type="button">
                 <span class="visually-hidden">Второй продукт</span>
               </button>
             </li>
 
             <li class="slider-pagination__item">
-              <button class="slider-pagination__button">
+              <button class="slider-pagination__button" type="button">
                 <span class="visually-hidden">Третий продукт</span>
               </button>
             </li>
@@ -189,19 +189,21 @@
                       </button>
                     </div>
                   </div>
+
+                  <div class="range__price-wrapper">
+                    <label class="range__title range__title--min">
+                      <input class="range__input js-price-min" type="number" name="min-price" min="0" placeholder="0">
+                      <span class="visually-hidden">Минимальная цена</span>
+                    </label>
+
+                    <label class="range__title range__title--max">
+                      <input class="range__input js-price-max" type="number" name="max-price" max="1000" placeholder="1000" value="900">
+                      <span class="visually-hidden">Максимальная цена</span>
+                    </label>
+                  </div>
                 </div>
 
-                <div class="range__price-wrapper">
-                  <label class="range__title range__title--min">
-                    <input class="range__input js-price-min" type="number" name="min-price" min="0" placeholder="0">
-                    <span class="visually-hidden">Минимальная цена</span>
-                  </label>
-
-                  <label class="range__title range__title--max">
-                    <input class="range__input js-price-max" type="number" name="max-price" max="1000" placeholder="1000" value="900">
-                    <span class="visually-hidden">Максимальная цена</span>
-                  </label>
-                </div>
+                
               </fieldset>
               
               <!-- RADIO INPUTS -->
@@ -245,7 +247,7 @@
               <!-- SWITCH INPUTS -->
               <fieldset class="filter-form__fieldset">
                 <legend>Страна произрастания</legend>
-                <ul class="filter-form__list">                
+                <ul class="filter-form__list">
                   <li class="filter-form__item">
                     <label class="switch">
                       <input class="switch__input visually-hidden" type="checkbox" name="brazil" checked>
@@ -290,14 +292,13 @@
 
               <div class="filter-form__button-wrapper">
                 <button class="filter-form__button button" type="submit">Применить</button>
-                <button class="filter-form__button filter-form__button--reset button">Сбросить</button>
+                <button class="filter-form__button filter-form__button--reset button" type="reset">Сбросить</button>
               </div>
           </form>
 
           <div class="catalog__catalog-wrapper">
             <!-- CATALOG HEADER -->
             <header class="catalog__header">
-              <label class="catalog__sorting-title">
                 <select class="catalog__sorting-select" name="sorting" aria-label="Сортировка">
                   <option value="descending" selected>по умолчанию</option>
                   <option value="descending">сначала дешевые</option>
@@ -305,14 +306,14 @@
                   <option value="popular">сначала популярные</option>
                   <option value="rating">сначала с высоким рейтингом</option>
                 </select>
-                <span>Сортировка:</span>
-              </label>
+                <span class="catalog__sorting-title">Сортировка:</span>
             </header>
 
             <!-- CATALOG LIST -->
             <ul class="catalog__list">
               <li class="catalog__item card">
                 <a class="card__image-link" href="#">
+                  <span class="visually-hidden">Переход на страницу товара</span>
                   <picture>
                     <source type="image/webp" srcset="images/catalog/coffee-can-1.webp 1x, images.webp 2x">
                     <img class="card__image" src="images/catalog/coffee-can-1.png" srcset="images/catalog/coffee-can-1@2x.png 2x" alt="" width="130" height="188">
@@ -330,6 +331,7 @@
 
               <li class="catalog__item card">
                 <a class="card__image-link" href="#">
+                  <span class="visually-hidden">Переход на страницу товара</span>
                   <picture>
                     <source type="image/webp" srcset="images/catalog/coffee-can-2.webp 1x, images.webp 2x">
                     <img class="card__image" src="images/catalog/coffee-can-2.png" srcset="images/catalog/coffee-can-2@2x.png 2x" alt="" width="130" height="188">
@@ -347,6 +349,7 @@
 
               <li class="catalog__item card">
                 <a class="card__image-link" href="#">
+                  <span class="visually-hidden">Переход на страницу товара</span>
                   <picture>
                     <source type="image/webp" srcset="images/catalog/coffee-can-3.webp 1x, images.webp 2x">
                     <img class="card__image" src="images/catalog/coffee-can-3.png" srcset="images/catalog/coffee-can-3@2x.png 2x" alt="" width="130" height="188">
@@ -365,6 +368,7 @@
 
               <li class="catalog__item card">
                 <a class="card__image-link" href="#">
+                  <span class="visually-hidden">Переход на страницу товара</span>
                   <picture>
                     <source type="image/webp" srcset="images/catalog/coffee-can-4.webp 1x, images.webp 2x">
                     <img class="card__image" src="images/catalog/coffee-can-4.png" srcset="images/catalog/coffee-can-4@2x.png 2x" alt="" width="130" height="188">
@@ -382,6 +386,7 @@
 
               <li class="catalog__item card">
                 <a class="card__image-link" href="#">
+                  <span class="visually-hidden">Переход на страницу товара</span>
                   <picture>
                     <source type="image/webp" srcset="images/catalog/coffee-can-5.webp 1x, images.webp 2x">
                     <img class="card__image" src="images/catalog/coffee-can-5.png" srcset="images/catalog/coffee-can-5@2x.png 2x" alt="" width="130" height="188">
@@ -399,6 +404,7 @@
 
               <li class="catalog__item card">
                 <a class="card__image-link" href="#">
+                  <span class="visually-hidden">Переход на страницу товара</span>
                   <picture>
                     <source type="image/webp" srcset="images/catalog/coffee-can-6.webp 1x, images.webp 2x">
                     <img class="card__image" src="images/catalog/coffee-can-6.png" srcset="images/catalog/coffee-can-6@2x.png 2x" alt="" width="130" height="188">
@@ -438,16 +444,17 @@
         </div>
       </section>
 
-      <secton class="map-position" data-test="map">
+      <section class="map-position" data-test="map">
+        <h2 class="visually-hidden">Месторасположение на карте</h2>
         <picture>
           <source type="image/webp" media="(min-width:1440px)" srcset="images/map-desktop.webp 1x, images/map-desktop@2x.webp 2x">
-          <source media="(min-width:1440px)" srcset="images/map-desktop.jpg 1x, images/map-desktop@2x.jpg 2x">
+          <source type="image/jpg" media="(min-width:1440px)" srcset="images/map-desktop.jpg 1x, images/map-desktop@2x.jpg 2x">
           <source type="image/webp" media="(min-width:768px)" srcset="images/map-tablet.webp 1x, images/map-tablet@2x.webp 2x">
-          <source media="(min-width:768px)" srcset="images/map-tablet.jpg 1x, images/map-tablet@2x.jpg 2x">
+          <source type="image/jpg" media="(min-width:768px)" srcset="images/map-tablet.jpg 1x, images/map-tablet@2x.jpg 2x">
           <source type="image/webp" srcset="images/map.webp 1x, images.webp 2x">
-          <img class="map-position__image" src="images/map" srcset="images/map 2x" alt="" width="" height="">
+          <img class="map-position__image" src="images/map" srcset="images/map 2x" alt="Месторасположение на карте: Санкт-Петербург, набережная реки Карповки, дом 5" width="320" height="420">
         </picture>
-      </secton>
+      </section>
     </main>
 
     <!-- PAGE FOOTER -->
@@ -456,7 +463,7 @@
         <div class="page-footer__logo-wrapper">
           <a class="page-footer__logo-link" href="#">
             <picture>
-              <source media="(min-width:768px)" srcset="images/logo-desktop.svg">
+              <source type="image/svg+xml" media="(min-width:768px)" srcset="images/logo-desktop.svg">
               <img class="page-footer__logo" src="images/logo-tablet.svg" alt="Лого Drink2Go" width="82" height="36">
             </picture>
           </a>
@@ -553,6 +560,6 @@
       </span>
     </footer>
     <script src="js/nouislider/nouislider.js"></script>
-    <script src="js/script.js"  type="module" defer></script>
+    <script src="js/script.js"  type="module"></script> <!-- defer-->
   </body>
 </html>

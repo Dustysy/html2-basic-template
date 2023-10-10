@@ -18,7 +18,7 @@
 
   border: 2px solid $base-grey;
   border-radius: 50%;
-  
+
   cursor: pointer;
 
   &::after {
@@ -45,20 +45,18 @@
       display: block;
       background-color: $primary-opacity;
     }
-   
   }
-  
+
   &:checked ~ .control__mark {
     border-color: $base-primary;
 
-      &::after {
-        display: block;
-        background-color: $base-primary;
-      }
+    &::after {
+      display: block;
+      background-color: $base-primary;
+    }
   }
 
-  
-  &:checked:disabled ~ .control__title, 
+  &:checked:disabled ~ .control__title,
   &:checked:disabled ~ .control__mark {
     color: $base-grey;
     border-color: $light-grey;
@@ -71,7 +69,7 @@
     }
   }
 
-  &:disabled ~ .control__title, 
+  &:disabled ~ .control__title,
   &:disabled ~ .control__mark {
     color: $base-grey;
     border-color: $light-grey;

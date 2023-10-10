@@ -51,8 +51,5 @@
   "type": "module",
   "volta": {
     "node": "18.18.0"
-  },
-  "dependencies": {
-    "nouislider": "^15.7.1"
   }
 }

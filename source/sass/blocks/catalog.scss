@@ -49,35 +49,31 @@
   margin: 0 0 16px;
 }
 
-.catalog__sorting-title{
+.catalog__sorting-title {
   position: relative;
 
   display: flex;
   flex-direction: row-reverse;
   align-items: center;
 
-  margin: 0;
+  margin: 0 8px 0 0;
 
   font-size: $label-size;
   line-height: $label-line-height;
   font-weight: 700;
 
-  span {
-   margin: 0 8px 0 0;
+  &::after {
+    content: "";
+    position: absolute;
+    z-index: 5;
+    top: 50%;
+    right: 7px;
+    transform: translate(0, -50%) rotate(-90deg);
 
-    &::after {
-      content: "";
-      position: absolute;
-      z-index: 5;
-      top: 50%;
-      right: 7px;
-      transform: translate(0, -50%) rotate(-90deg);
+    width: 10px;
+    height: 10px;
 
-      width: 10px;
-      height: 10px;
-
-      background-image: url("../../images/icons/stack.svg#arrow");
-    }
+    background-image: url("../../images/icons/stack.svg#arrow");
   }
 }
 
@@ -98,16 +94,16 @@
 
   &:hover {
     background-color: $base-secondary;
-   }
+  }
 
   &:focus {
     background-color: $base-secondary;
-   }
+  }
 
   &:active {
     background-color: transparent;
 
-    &~ span::after {
+    & ~ span::after {
       transform: translate(0, -50%) rotate(90deg);
     }
     // Добавить дополнителльную стилизацию стрелки

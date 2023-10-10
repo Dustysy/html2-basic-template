@@ -19,7 +19,7 @@
   }
 }
 
-.page-heade__logo-wrapper {
+.page-header__logo-wrapper {
   display: flex;
   margin: 12px 0 0 0;
 
@@ -35,6 +35,7 @@
 
 .page-header__logo {
   width: 100%;
+
   @media (min-width: $desktop-width) {
     width: 170px;
   }
