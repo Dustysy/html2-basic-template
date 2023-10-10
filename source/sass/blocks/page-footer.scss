@@ -63,10 +63,6 @@
   }
 }
 
-// .page-footer__socials {
-
-// }
-
 .page-footer__info-block {
   margin: 0 -20px;
   padding: 20px 20px;
@@ -122,6 +118,15 @@
   color: $base-black;
   text-transform: uppercase;
   text-decoration: none;
+
+  &:hover,
+  &:focus {
+    color: $primary-lighter;
+  }
+
+  &:active {
+    color: $primary-darker;
+  }
 }
 
 .page-footer__address {
