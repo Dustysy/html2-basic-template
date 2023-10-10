@@ -12,13 +12,16 @@
   <body class="page__body">
     <!-- PAGE HEADER -->
     <header class="page-header" data-test="header">
-      <a class="page-header__link" href="#">
-        <picture>
-          <source media="(min-width: 1440px)" srcset="images/logo-desktop.svg">
-          <source media="(min-width: 768px)" srcset="images/logo-tablet.svg">
-          <img class="page-header__logo" src="images/logo.svg" alt="Лого Drink2Go" width="32" height="36">
-        </picture>
-      </a>
+      <div class="page-heade__logo-wrapper">
+        <a class="page-header__link" href="#">
+          <picture>
+            <source media="(min-width: 1440px)" srcset="images/logo-desktop.svg">
+            <source media="(min-width: 768px)" srcset="images/logo-tablet.svg">
+            <img class="page-header__logo" src="images/logo.svg" alt="Лого Drink2Go" width="32" height="36">
+          </picture>
+        </a>
+        <p class="page-header__logo-text">Интернет-магазин кофейных напитков</p>
+      </div>
       
       <!-- NAVIGATION -->
       <nav class="page-header__nav nav">
@@ -37,7 +40,7 @@
           </li>
 
           <li class="nav__site-item">
-            <a class="nav__link" href="#">О нас</a>
+            <a class="nav__link" href="#">О&nbsp;нас</a>
           </li>
         </ul>     
 
@@ -48,6 +51,7 @@
               <svg class="nav__customer-icon" width="16" height="16">
                 <use href="images/icons/stack.svg#user"></use>
               </svg>
+              <span class="nav__customer-label">Войти</span>
             </a>
           </li>
 
@@ -56,6 +60,7 @@
               <svg class="nav__customer-icon" width="16" height="16">
                 <use href="images/icons/stack.svg#busket"></use>
               </svg>
+              <span class="nav__customer-label">Корзина</span>
             </a>
           </li>
         </ul>
@@ -448,12 +453,15 @@
     <!-- PAGE FOOTER -->
     <footer class="page-footer" data-test="footer">
       <div class="page-footer__intro-wrapper">
-        <a class="page-footer__logo-link" href="#">
-          <picture>
-            <source media="(min-width:768px)" srcset="images/logo-desktop.svg">
-            <img class="page-footer__logo" src="images/logo-tablet.svg" alt="Лого Drink2Go" width="82" height="36">
-          </picture>
-        </a>
+        <div class="page-heade__logo-wrapper">
+          <a class="page-footer__logo-link" href="#">
+            <picture>
+              <source media="(min-width:768px)" srcset="images/logo-desktop.svg">
+              <img class="page-footer__logo" src="images/logo-tablet.svg" alt="Лого Drink2Go" width="82" height="36">
+            </picture>
+          </a>
+          <p class="page-header__logo-text">Интернет-магазин кофейных напитков</p>
+        </div>
         <ul class="page-footer__socials social">
           <li class="social__item">
             <a class="social__link" href="#">

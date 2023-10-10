@@ -2,19 +2,57 @@
   position: relative; //for the mobile burger menu
   display: flex;
   justify-content: space-between;
-  align-items: center;
 
   padding: 0 0  0 20px;
+
+  @media (min-width: $tablet-width) {
+    justify-content: unset;
+    display: grid;
+    grid-template-columns: 82px 520px;
+    gap: 20px 67px;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-template-columns: 316px 883px;
+    gap: 20px 162px;
+    padding: 0 40px;
+  }
 }
 
-// .page-header__link {
+.page-heade__logo-wrapper {
+  display: flex;
+  margin: 12px 0 0 0;
 
-// }
+  @media (min-width: $tablet-width) {
+    margin: 22px 0 0 0;
+    grid-column: 1/2;
+  }
+}
 
-// .page-header__logo {
+.page-header__link {
+  margin: 0 20px 0 0;
+}
 
-// }
+.page-header__logo {
+  width: 100%;
+  @media (min-width: $desktop-width) {
+    width: 170px;
+  }
+}
 
-// .page-header__nav {
+.page-header__logo-text {
+  display: none;
 
-// }
+  width: 128px;
+  height: 32px;
+  margin: 0;
+
+  font-size: $badge-size;
+  line-height: $badge-line-height;
+
+  @media (min-width: $desktop-width) {
+    display: flex;
+    width: 128px;
+    flex-shrink: 0;
+  }
+}
