@@ -87,7 +87,7 @@
           <span class="visually-hidden">Предыдущий продукт</span>
         </button>
 
-        <div class="product-slider__wrapper">
+        <div class="product-slider__wrapper product-slider__wrapper--flat-white product-slider__wrapper--active">
           <picture>
             <source type="image/webp" media="(min-width:1440px)" srcset="images/slider/slider-1-desktop.webp 1x, images/slider/slider-1-desktop@2x.webp 2x">
             <source type="image/png" media="(min-width:1440px)" srcset="images/slider/slider-1-desktop.png 1x, images/slider/slider-1-desktop@2x.png 2x">
@@ -112,7 +112,60 @@
               <button class="button" type="button">Заказать</button>
             </div>
           </div>
+        </div>
 
+        <div class="product-slider__wrapper product-slider__wrapper--lavander">
+          <picture>
+            <source type="image/webp" media="(min-width:1440px)" srcset="images/slider/slider-2-desktop.webp 1x, images/slider/slider-2-desktop@2x.webp 2x">
+            <source type="image/png" media="(min-width:1440px)" srcset="images/slider/slider-2-desktop.png 1x, images/slider/slider-2-desktop@2x.png 2x">
+            <source type="image/webp" media="(min-width:768px)" srcset="images/slider/slider-2-tablet.webp 1x, images/slider/slider-2-tablet@2x.webp 2x">
+            <source type="image/png" media="(min-width:768px)" srcset="images/slider/slider-2-tablet.png 1x, images/slider/slider-2-tablet@2x.png 2x">
+            <source type="image/webp" srcset="images/slider/slider-2.webp 1x, images.webp 2x">
+            <img class="product-slider__image" src="/images/slider/slider-2.png" srcset="images/slider/slider-2@2x.png 2x" alt="" width="280" height="280">
+          </picture>
+
+          <div class="product-slider__info-wrapper">
+            <span class="badge">Новинка!</span>
+            <h2 class="product-slider__title">Лавандовый Латте</h2>
+            <p class="product-slider__text">
+              Невероятное сочетание перуанской высокогорной
+              арабики с молоком ламы и лавандовым сиропом унесёт
+              вас прямо на вершину Радужных гор
+            </p>
+
+            <div class="product-slider__buy-info">
+              <del class="product-slider__old-price">285₽</del>
+              <span class="product-slider__new-price">265₽</span>
+              <button class="button" type="button">Заказать</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-slider__wrapper product-slider__wrapper--espresso">
+          <picture>
+            <source type="image/webp" media="(min-width:1440px)" srcset="images/slider/slider-3-desktop.webp 1x, images/slider/slider-3-desktop@2x.webp 2x">
+            <source type="image/png" media="(min-width:1440px)" srcset="images/slider/slider-3-desktop.png 1x, images/slider/slider-3-desktop@2x.png 2x">
+            <source type="image/webp" media="(min-width:768px)" srcset="images/slider/slider-3-tablet.webp 1x, images/slider/slider-3-tablet@2x.webp 2x">
+            <source type="image/png" media="(min-width:768px)" srcset="images/slider/slider-3-tablet.png 1x, images/slider/slider-3-tablet@2x.png 2x">
+            <source type="image/webp" srcset="images/slider/slider-3.webp 1x, images.webp 2x">
+            <img class="product-slider__image" src="/images/slider/slider-3.png" srcset="images/slider/slider-3@2x.png 2x" alt="" width="280" height="280">
+          </picture>
+
+          <div class="product-slider__info-wrapper">
+            <span class="badge">Новинка!</span>
+            <h2 class="product-slider__title">Тройной Эспрессо</h2>
+            <p class="product-slider__text">
+              Мощнее укола адреналина, чернее самой тёмной ночи,
+              этот тройной эспрессо из Колумбии покажет вам, что такое
+              настоящая бодрость
+            </p>
+
+            <div class="product-slider__buy-info">
+              <del class="product-slider__old-price">395₽</del>
+              <span class="product-slider__new-price">375₽</span>
+              <button class="button" type="button">Заказать</button>
+            </div>
+          </div>
         </div>
 
         <button class="product-slider__button product-slider__button--next slider-button-next" type="button">
@@ -178,6 +231,7 @@
         <div class="catalog__content-wrapper">
           <!-- FILTER -->
           <form class="filter-form" action="https://echo.htmlacademy.ru/" method="get">
+            <!-- RANGE -->
               <fieldset class=" filter-form__fieldset filter-form__fieldset--range">
                 <legend>Цена</legend>
                 <div class="filter-form__range range">
@@ -429,25 +483,15 @@
         <div class="pagination">
           <button class="button pagination__button pagination__button--prev" type="button">
             <span class="visually-hidden">Предыдущая страница</span>
-
-            <svg class="pagination__button-icon" width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-              <path fill-rule="evenodd" clip-rule="evenodd" d="M13.7166 0L15 1.32082L6.56677 10L15 18.6792L13.7166 20L4 10L13.7166 0Z"/>
-            </svg>
-
             <span class="pagination__button-text">Назад</span>
           </button>
-
+          <!-- Потом оберну в список -->
           <a class="pagination__link button" href="#">1</a>
           <a class="pagination__link pagination__link--current button" href="#">2</a>
           <a class="pagination__link button" href="#">3</a>
 
           <button class="button pagination__button pagination__button--next" type="button">
             <span class="visually-hidden">Следующая страница</span>
-
-            <svg class="pagination__button-icon" width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-              <path d="M13.7166 0L15 1.32082L6.56677 10L15 18.6792L13.7166 20L4 10L13.7166 0Z"/>
-            </svg>
-
             <span class="pagination__button-text">Вперёд</span>
           </button>
         </div>
@@ -568,7 +612,7 @@
         </a>
       </span>
     </footer>
-    <script src="js/nouislider/nouislider.js"></script>
+    <!-- <script src="js/nouislider/nouislider.js"></script> -->
     <script src="js/script.js"  type="module"></script> <!-- defer-->
   </body>
 </html>

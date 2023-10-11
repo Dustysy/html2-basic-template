@@ -7,13 +7,11 @@
   @media (min-width: $tablet-width) {
     justify-content: flex-end;
   }
-
-  @media (min-width: $desktop-width) {
-  }
 }
 
 .pagination__button {
   position: relative;
+
   display: flex;
   justify-content: center;
   align-items: center;
@@ -23,19 +21,30 @@
 
   background-color: $base-white;
 
-  .pagination__button-icon {
-    fill: $base-primary;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    width: 10px;
+    height: 10px;
+    mask-image: url("../../images/icons/stack.svg#arrow");
+    background-color: $base-primary;
   }
 
   &--next {
-    transform: rotate(180deg);
+    &::before {
+      transform: rotate(180deg) translate(50%, 50%);
+    }
   }
 
-  &:hover .pagination__button-icon,
-  &:focus .pagination__button-icon,
-  &:active .pagination__button-icon,
-  &:disabled .pagination__button-icon {
-    fill: $base-white;
+  &:hover::before,
+  &:focus::before,
+  &:active::before,
+  &:disabled::before {
+    background-color: $base-white;
   }
 
   &:hover .pagination__button-text,
@@ -53,12 +62,10 @@
   @media (min-width: $tablet-width) {
     width: unset;
     padding: 8px 20px;
+
     &--next {
       transform: none;
     }
-  }
-
-  @media (min-width: $desktop-width) {
   }
 }
 

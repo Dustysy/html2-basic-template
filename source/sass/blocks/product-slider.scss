@@ -3,8 +3,10 @@
 
   display: flex;
   justify-content: center;
+  min-height: 656px;
   padding: 20px 20px 60px;
-  background-color: $flat-white; //change due to the slider
+
+  background-color: $flat-white;
 
   @media (min-width: $tablet-width) {
     min-height: 640px;
@@ -14,12 +16,13 @@
 
   @media (min-width: $desktop-width) {
     display: block;
+    min-height: 714px;
     margin: 0;
     padding: 30px 40px 60px;
   }
 }
 
-.product-slider__button { // slider-button-prev
+.product-slider__button {
   position: absolute;
   top: 0;
 
@@ -35,6 +38,7 @@
   &::before {
     content: "";
     position: absolute;
+    z-index: 5;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -42,22 +46,15 @@
     width: 20px;
     height: 20px;
 
-    background-image: url("../../images/icons/stack.svg#arrow");
+    mask-image: url("../../images/icons/stack.svg#arrow");
+    background-color: $base-primary;
   }
 
   &--prev {
     left: 0;
     // СОСТОЯНИЯ КНОПКИ
-    &:hover {
-      outline: none;
-      background: linear-gradient(to right, $base-white 10%, transparent);
-    }
-
-    &:focus {
-      outline: none;
-      background: linear-gradient(to right, $base-white 10%, transparent);
-    }
-
+    &:hover,
+    &:focus,
     &:focus-visible {
       outline: none;
       background: linear-gradient(to right, $base-white 10%, transparent);
@@ -73,20 +70,12 @@
     right: 0;
 
     &::before {
-      transform: rotate(180deg);
+      transform: rotate(180deg) translate(50%, 50%);
     }
 
     // СОСТОЯНИЯ КНОПКИ
-    &:hover {
-      outline: none;
-      background: linear-gradient(to left, $base-white 10%, transparent);
-    }
-
-    &:focus {
-      outline: none;
-      background: linear-gradient(to left, $base-white 10%, transparent);
-    }
-
+    &:hover,
+    &:focus,
     &:focus-visible {
       outline: none;
       background: linear-gradient(to left, $base-white 10%, transparent);
@@ -98,16 +87,31 @@
     }
   }
 
+  &:disabled {
+    background: none;
+    cursor: default;
+
+    &::before {
+      background-color: $base-grey;
+    }
+  }
+
   @media (min-width: $tablet-width) {
     width: 80px;
   }
 }
 
 .product-slider__wrapper {
+  position: absolute;
+  opacity: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
+
+  &--active {
+    opacity: 1;
+  }
 
   @media (min-width: $desktop-width) {
     flex-direction: row;
@@ -115,6 +119,8 @@
 }
 
 .product-slider__image {
+  display: block;
+
   @media (min-width: $tablet-width) {
     position: absolute;
     top: 352px;
@@ -201,6 +207,11 @@
 
 .product-slider__pagination {
   display: none;
+
+  position: absolute;
+  bottom: 60px;
+  left: 50%;
+  transform: translate(-50%);
 
   @media (min-width: $desktop-width) {
     display: flex;
