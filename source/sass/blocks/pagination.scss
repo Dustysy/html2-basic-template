@@ -63,15 +63,15 @@
     width: unset;
     padding: 8px 20px;
 
-    &--next {
-      transform: none;
+    &::before {
+      display: none;
     }
-  }
-}
 
-.pagination__button-icon {
-  @media (min-width: $tablet-width) {
-    display: none;
+    &--next {
+      &::before {
+      transform: none;
+      }
+    }
   }
 }
 

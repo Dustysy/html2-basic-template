@@ -45,16 +45,15 @@
 }
 
 .catalog__header {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
   min-height: 32px;
   margin: 0 0 16px;
 }
 
 .catalog__sorting-title {
   position: relative;
-
-  display: flex;
-  flex-direction: row-reverse;
-  align-items: center;
 
   margin: 0 8px 0 0;
 
@@ -67,7 +66,7 @@
     position: absolute;
     z-index: 5;
     top: 50%;
-    right: 7px;
+    right: -162px;
     transform: translate(0, -50%) rotate(-90deg);
 
     width: 10px;
