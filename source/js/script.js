@@ -5,8 +5,6 @@ import { chooseSlide, showPrevSlide, showNextSlide } from './slider.js';
 
 openMenu();
 
-// initRange();
-
 chooseSlide();
 showPrevSlide();
 showNextSlide();

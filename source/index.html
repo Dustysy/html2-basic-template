@@ -94,7 +94,7 @@
             <source type="image/webp" media="(min-width:768px)" srcset="images/slider/slider-1-tablet.webp 1x, images/slider/slider-1-tablet@2x.webp 2x">
             <source type="image/png" media="(min-width:768px)" srcset="images/slider/slider-1-tablet.png 1x, images/slider/slider-1-tablet@2x.png 2x">
             <source type="image/webp" srcset="images/slider/slider-1.webp 1x, images.webp 2x">
-            <img class="product-slider__image" src="/images/slider/slider-1.png" srcset="images/slider/slider-1@2x.png 2x" alt="" width="280" height="280">
+            <img class="product-slider__image" src="images/slider/slider-1.png" srcset="images/slider/slider-1@2x.png 2x" alt="" width="280" height="280">
           </picture>
 
           <div class="product-slider__info-wrapper">
@@ -485,10 +485,20 @@
             <span class="visually-hidden">Предыдущая страница</span>
             <span class="pagination__button-text">Назад</span>
           </button>
-          <!-- Потом оберну в список -->
-          <a class="pagination__link button" href="#">1</a>
-          <a class="pagination__link pagination__link--current button" href="#">2</a>
-          <a class="pagination__link button" href="#">3</a>
+          
+          <ol class="pagination__list">
+            <li class="pagination__item">
+              <a class="pagination__link button" href="#">1</a>
+            </li>
+
+            <li class="pagination__item">
+               <a class="pagination__link pagination__link--current button" href="#">2</a>
+            </li>
+
+            <li class="pagination__item">
+              <a class="pagination__link button" href="#">3</a>
+            </li>
+          </ol>
 
           <button class="button pagination__button pagination__button--next" type="button">
             <span class="visually-hidden">Следующая страница</span>
@@ -612,7 +622,7 @@
         </a>
       </span>
     </footer>
-    <!-- <script src="js/nouislider/nouislider.js"></script> -->
+    <script src="js/nouislider.js"></script>
     <script src="js/script.js"  type="module"></script> <!-- defer-->
   </body>
 </html>
