@@ -1,9 +1,14 @@
 .range__wrapper {
   position: relative;
   width: 100%;
-  height: 4px;
+  height: 24px;
   margin: 0 0 34px;
-  background-color: $light-grey;
+  padding: 10px 0;
+
+  background-color: transparent;
+  border-radius: 0;
+  border: none;
+  box-shadow: none;
 
   @media (min-width: $tablet-width) {
     margin: 0 0 40px;
@@ -14,31 +19,97 @@
   }
 }
 
-.range__bar {
-  position: relative;
+.noUi-connects {
+  width: 100%;
   height: 4px;
-  background-color: $primary-lighter;
+  background-color: $light-grey;
+  border-radius: 0;
 }
 
-.range__toggle {
+.noUi-connect {
+  width: 100%;
+  height: 4px;
+  background-color: $base-primary;
+  border-radius: 0;
+}
+
+// .noUi-base,
+// .range__bar {
+//   position: relative;
+//   height: 4px;
+//   background-color: $primary-lighter;
+// }
+
+// .noUi-origin {
+//   transform: translate(10%);
+// }
+
+.noUi-horizontal .noUi-handle
+ { //.range__toggle
   position: absolute;
   width: 20px;
   height: 20px;
 
-  background-color: #ffffff;
+  background-color: $base-white;
+  box-shadow: none;
   border: 2px solid $primary-lighter;
   border-radius: 50%;
   cursor: pointer;
 
-  &--min {
-    top: -7px;
-    left: 0;
+  &::before,
+  &::after {
+    content: none;
   }
 
-  &--max {
-    top: -7px;
-    right: -5px;
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    display: none;
+
+    height: 100%;
+    width: 100%;
+
+    background-color: $primary-opacity;
+    border-radius: 50%;
   }
+
+  &:hover { // Добавлено на собственное усмотрение
+    &::after {
+      display: block;
+    }
+  }
+
+  &:focus,
+  &:focus-visible,
+  &:active {
+    outline: none;
+    border-color: $primary-darker;
+
+    &::after {
+      display: block;
+    }
+  }
+
+  &:disabled {
+    color: $base-grey;
+    background-color: $lightest-grey;
+    border-color: $light-grey;
+  }
+
+//   &-lower,
+//   &--min {
+//     top: -7px;
+//     left: 0;
+//   }
+
+//   &-upper
+//   &--max {
+//     top: -7px;
+//     right: -5px;
+//   }
 }
 
 .range__price-wrapper {
