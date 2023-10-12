@@ -3,6 +3,26 @@
 @import "global/global";
 @import "global/fonts";
 
+/* LITTLE BLOCKS */
+@import "blocks/nouislider";
+@import "blocks/button";
+@import "blocks/badge";
+@import "blocks/social";
+@import "blocks/copyright";
+@import "blocks/slider-pagination";
+@import "blocks/control";
+@import "blocks/switch";
+@import "blocks/range";
+
 /* BLOCKS */
-@import "blocks/header";
 @import "blocks/page";
+@import "blocks/page-header";
+@import "blocks/nav";
+@import "blocks/product-slider";
+@import "blocks/features";
+@import "blocks/filter-form";
+@import "blocks/catalog";
+@import "blocks/card";
+@import "blocks/pagination";
+@import "blocks/map-position";
+@import "blocks/page-footer";

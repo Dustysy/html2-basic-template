@@ -1,0 +1,79 @@
+.control {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+}
+
+.control__title {
+  margin: 0 0 0 10px;
+}
+
+.control__mark {
+  position: relative;
+
+  display: flex;
+  width: 24px;
+  height: 24px;
+
+  border: 2px solid $base-grey;
+  border-radius: 50%;
+
+  cursor: pointer;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    display: none;
+    width: 16px;
+    height: 16px;
+
+    border-radius: 50%;
+  }
+}
+
+.control__input {
+  &:hover:not(:disabled):not(:checked) ~ .control__mark,
+  &:focus:not(:disabled):not(:checked) ~ .control__mark {
+    border-color: $primary-lighter;
+
+    &::after {
+      display: block;
+      background-color: $primary-opacity;
+    }
+  }
+
+  &:checked ~ .control__mark {
+    border-color: $base-primary;
+
+    &::after {
+      display: block;
+      background-color: $base-primary;
+    }
+  }
+
+  &:checked:disabled ~ .control__title,
+  &:checked:disabled ~ .control__mark {
+    color: $base-grey;
+    border-color: $light-grey;
+
+    cursor: default;
+
+    &::after {
+      display: block;
+      background-color: $light-grey;
+    }
+  }
+
+  &:disabled ~ .control__title,
+  &:disabled ~ .control__mark {
+    color: $base-grey;
+    border-color: $light-grey;
+
+    cursor: default;
+  }
+}

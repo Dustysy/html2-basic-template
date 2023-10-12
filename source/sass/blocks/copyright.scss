@@ -1,0 +1,30 @@
+.copyright {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: $base-grey;
+}
+
+.copyright__link {
+  display: flex;
+  align-items: center;
+
+  padding: 16px 0 16px 3px; /*Adds a bigger area for a click*/
+
+  color: $base-grey;
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    color: $base-primary;
+  }
+
+  &:active {
+    color: $primary-darker;
+  }
+}
+
+.copyright__logo {
+  margin: 0 0 0 4px;
+}

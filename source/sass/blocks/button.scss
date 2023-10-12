@@ -1,0 +1,33 @@
+.button {
+  width: 113px;
+  padding: 8px 20px;
+
+  font-family: $main-font;
+  font-size: $label-size;
+  line-height: $label-line-height;
+  text-align: center;
+  color: $base-white;
+
+  background-color: $base-primary;
+  border: none;
+  border-radius: 4px;
+
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    outline: none;
+    background-color: $primary-lighter;
+    color: $base-white;
+  }
+
+  &:active {
+    background-color: $primary-darker;
+    color: $base-white;
+  }
+
+  &:disabled {
+    background-color: $base-grey;
+    color: $base-white;
+  }
+}
